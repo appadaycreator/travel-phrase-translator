@@ -1,8 +1,9 @@
 {
   "name": "Travel Phrase Translator",
   "short_name": "travel-phras",
-  "start_url": "/",
+  "start_url": "/travel-phrase-translator/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#6366f1"
+  "theme_color": "#6366f1",
+  "scope": "/travel-phrase-translator/"
 }
