@@ -16,7 +16,6 @@ self.addEventListener('install', event => {
     caches.open(CACHE_ASSETS).then(cache => {
       return cache.addAll(ASSETS_TO_CACHE);
     }).catch(() => {
-      console.log('Cache install failed, continuing...');
       return Promise.resolve();
     })
   );

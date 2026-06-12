@@ -1,0 +1,93 @@
+Fetch this design file, read its readme, and implement the relevant aspects of the design. https://api.anthropic.com/v1/design/h/7JVSvK3fgoWjkoks0tO-8A
+Implement: ## 指示
+このサービス「海外旅行フレーズ変換ツール」専用の、他のどのサービスとも異なるオリジナルデザインを実装してほしい。
+
+**必ず最初に以下のデザイン参照画像を Read tool で読み込み、配色・レイアウト・フォント・セクション構成を視覚的に把握してから実装を開始してください:**
+- /Users/masayukitokunaga/workspace/30service/travel-phrase-translator/_design/2026-06-13_0744/01_design.png（LPページ全体デザイン）
+- /Users/masayukitokunaga/workspace/30service/travel-phrase-translator/_design/2026-06-13_0744/02_design.png（サービスページデザイン）
+
+## ⚠️ 最重要：ゼロから独自設計すること
+
+このサービスのジャンル・ターゲットユーザー・目的に合わせて、**完全にゼロから**HTML/CSSを設計すること。
+
+**絶対禁止：**
+- `.c`, `.sec`, `.st`, `.btn`, `.hdr` など汎用CSSクラス名の使用
+- 他のサービスと同じセクション構造（ヒーロー→特徴3つ→FAQ→CTA のコピー）
+- 既存のCSSテンプレート・フレームワークの流用
+- 「どのサービスにも当てはまる」汎用的なLP構造
+
+**必須：**
+- このサービスの性質を反映した独自のCSSクラス名（例: `.nuri-hero`, `.calc-step`, `.advisor-card` 等）
+- ターゲットユーザーの感情・行動を意識したビジュアル設計
+- Claude Designのプロトタイプが提供するコンポーネント・カラーを最優先で採用
+- 他のサービスと見比べて「明らかに違うデザイン」になっていること
+
+## 作業内容
+
+- LPページとサービスページのデザインを実際のWebサービスに反映する。
+- **LPページは必ず `lp/index.html` として新規作成すること**（ディレクトリが存在しない場合は `mkdir lp` で作成）
+- サービスページは既存の / を更新。ユーザの利用動線を優先にしつつデザイン変更して。
+- コンテンツの目的に合わせて良いが、PCでもモバイルでも見れるように調整してほしい。
+- 全体のトップページのサービスページへのリンクは、LPページのURL（/lp/）に変更する
+- 今回の新デザイン（LPページのテーマカラーや素材・文字フォント・画像など）を該当既存サービスの全ページに刷新すること
+
+## ⚠️ 作業スコープ（必ず守ること）
+
+**読み込み・編集するファイルはこれだけ：**
+- `index.html`（サービスページ）
+- `lp/index.html`（LPページ・存在しない場合は新規作成）
+- 既存の `.css` ファイル（存在する場合のみ）
+
+**それ以外のファイル（contact.html, privacy-policy.html, terms.html, usage.html 等）は読まない・触らない。**
+ディレクトリ探索・ファイル一覧取得も不要。上記ファイルを直接編集すること。
+
+## ⚠️ 必須：実装完了後に必ず以下を実行すること（ローカルサーバーテストは不要）
+
+```bash
+git add -A
+git commit -m "Apply: design update with LP page"
+git push origin main
+```
+
+**git push origin main を実行してから完了とすること。push 完了のログを確認すること。**
+ローカルHTTPサーバーでのテストは不要。push が完了した時点で作業完了。
+
+## Claude Design プロジェクト
+
+
+Claude Design で生成されたコンポーネント（JSX・CSS）やプロトタイプの構成・スタイルを**最優先**で実装すること。
+Claude Designのプロトタイプがある場合は、その配色・タイポグラフィ・コンポーネント設計を忠実に再現すること。
+
+## デザイン参照画像（ローカル）
+- LP全体デザイン:      /Users/masayukitokunaga/workspace/30service/travel-phrase-translator/_design/2026-06-13_0744/01_design.png
+- サービスページデザイン: /Users/masayukitokunaga/workspace/30service/travel-phrase-translator/_design/2026-06-13_0744/02_design.png
+- アイコン素材シート:   /Users/masayukitokunaga/workspace/30service/travel-phrase-translator/_design/2026-06-13_0744/03_design.png
+- 分割済みアイコン:    /Users/masayukitokunaga/workspace/30service/travel-phrase-translator/assets/icons/split
+
+## 変更禁止事項
+- GTM・GA4・AdSenseタグは変更しない
+- アフィリエイトリンクは変更しない
+- コアJSロジック（診断・計算ロジック）は変更しない
+
+## 対象プロジェクト
+296 海外旅行フレーズ変換ツール travel-phrase-translator https://appadaycreator.com/travel-phrase-translator/
+/Users/masayukitokunaga/workspace/30service/travel-phrase-translator/
+
+## ②デザイン改善要約（反映すること）
+SUMMARY_JSON:{"a":["交通・ショッピング・観光・税関シーンを追加して8シーン以上に拡充（現在4シーンから倍増）","フランス語・スペイン語・タイ語など人気旅先言語を追加（英中韓3言語→6言語以上）","各フレーズにカタカナ発音ガイド（中国語ピンイン・韓国語ローマ字）を付与"],"b":["フレーズカードを大画面表示するスクリーンショット用フルスクリーンモード追加","XへのSNSシェアボタンとLINE共有ボタンをフレーズカードに追加","ランダムフレーズ練習モード（もう一度ボタン＋クイズ形式）で反復学習対応"],"d":["旅行前チェックリスト機能：シーン別覚えておきたいフレーズのクイズテスト","同一フレーズを3言語同時表示するコンパクトカード設計（競合アプリは1言語ずつ）","インバウンド逆引きモード：外国語の問いかけを日本語で確認できる訪日客対応機能"],"seo_h1":"海外旅行フレーズ変換ツール｜英語・中国語・韓国語をシーン別に即表示","seo_meta":"シーン（ホテル・レストラン・空港・緊急）を選ぶだけで英語・中国語・韓国語フレーズを即表示。音声再生・お気に入り保存対応。旅行準備に役立つ無料Webツール。","forbidden":["GTM-TXQGZRF9","ca-pub-8427583028015858","a8.net/svt/ejp?a8mat=4B3WJ5+C2OQY2+14CS+68EPE","he","initFavorites","saveFavorites","getFavKey","toggleFav","isFav","updateFavButton","initStats","saveStats","updateStats","toggleDarkMode","updateThemeToggle","initTheme","generate","filterPhrases","updateCount","showCopyMenu","copyPhrase","fallbackCopy","speakPhrase","renderStats","printPhrases","exportAll","showToast"],"design_tokens":{"primary":"#4F46E5","accent":"#F59E0B","font":"sans-serif","mood":"modern","cta":"フレーズを見る"}}
+
+## ブランドカラー（必ずこの配色でCSSを実装すること）
+  - メインカラー: #4F46E5（ボタン・見出し・強調要素に使用）
+  - アクセントカラー: #F59E0B（CTA・ハイライトに使用）
+  - フォント: sans-serif
+  - CTAボタン文言: 「フレーズを見る」
+
+## 現在のindex.htmlの構成情報（事前読み込み済み・tool callでのファイル読み込み不要）
+<title>海外旅行フレーズ変換ツール【無料】無料Webツール</title>
+<meta name="description" content="シーン（ホテル・レストラン・空港・緊急）を選ぶだけで使える英語・中国語・韓国語フレーズを表示">
+<!-- GTM: GTM-TXQGZRF9 -->
+<!-- AdSense: ca-pub-8427583028015858 -->
+<!-- Affiliate A8: a8.net/svt/ejp?a8mat=4B3WJ5+C2OQY2+14CS+68EPE -->
+<style>:root { --bg-primary: #ffffff; --bg-secondary: linear-gradient(135deg, #E0E7FF 0%, #F0F4FF 100%); --text-primary: #333; --text-secondary: #555; --border-color: #e5e7eb; --card-bg: white; --card-shadow: rgba(0,0,0,0.08); }</style>
+<!-- JS functions: he, initFavorites, saveFavorites, getFavKey, toggleFav, isFav, updateFavButton, initStats, saveStats, updateStats, toggleDarkMode, updateThemeToggle, initTheme, generate, filterPhrases, updateCount, showCopyMenu, copyPhrase, fallbackCopy, speakPhrase, renderStats, printPhrases, exportAll, showToast -->
+<h1>海外旅行フレーズ変換ツール</h1>
